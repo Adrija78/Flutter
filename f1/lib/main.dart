@@ -1,6 +1,9 @@
 // import 'dart:js_util';
 
 import 'package:flutter/material.dart';
+import 'pages/home_page.dart';
+import 'pages/login_page.dart';
+
 void main(){
   runApp(const MyApp());
 }
@@ -10,18 +13,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Material(
-        child: Center(
-          child: Container(
-            child: Text("Hii I am Adrija Karmakar\nbtech CSE\nSection 8"),       
-          ),
-        ),
+      // home:HomePage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        primarySwatch: Colors.green
       ),
+      darkTheme: ThemeData(
+        brightness: Brightness.light,
+      ),
+      routes:{
+        "/":(context) => HomePage(),
+        "/Login":(context) => LoginPage(),
+      }
     );
   }
 }
-
-
 
 
 

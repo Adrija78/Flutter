@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 void main(){
   runApp(const HomePage());
 }
-class HomePage extends StatelessWidget {
+class  HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
@@ -13,7 +13,14 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          child:Text("Hiii I am Adrija Karmakar\n  btech CSE(Iot,blockchain,cyber security)\n  Section 8") ,
+          child:Text(
+            "Hiii I am Adrija Karmakar\nbtech CSE(Iot,blockchain,cyber security)",
+            style: TextStyle(
+            fontSize: 20,
+            color: Colors.red,
+            
+           ),
+          ) ,
         ),
       ),
       drawer: Drawer(),
